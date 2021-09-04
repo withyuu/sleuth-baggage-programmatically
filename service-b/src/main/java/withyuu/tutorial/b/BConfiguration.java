@@ -1,4 +1,4 @@
-package withyuu.tutorial.a;
+package withyuu.tutorial.b;
 
 import brave.baggage.BaggageField;
 import brave.baggage.BaggagePropagationConfig.SingleBaggageField;
@@ -7,15 +7,9 @@ import brave.baggage.CorrelationScopeConfig.SingleCorrelationField;
 import brave.baggage.CorrelationScopeCustomizer;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.web.client.RestTemplate;
 
 @Configuration
-public class AConfiguration {
-
-  @Bean
-  public RestTemplate restTemplate() {
-    return new RestTemplate();
-  }
+public class BConfiguration {
 
   @Bean
   public BaggagePropagationCustomizer baggagePropagationCustomizer() {
